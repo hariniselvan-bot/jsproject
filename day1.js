@@ -118,51 +118,200 @@
 //08/08/2025 task 
    
 //1. Post vs Pre Increment
-let x = 5;
-let y = x++ + ++x;
-console.log(y, x);
+// let x = 5;
+// let y = x++ + ++x;
+// console.log(y, x);
 
-//2. Assignment Operator Practice
-let total = 50;
-total += 30; 
-total /= 4;  
-console.log(total);
+// //2. Assignment Operator Practice
+// let total = 50;
+// total += 30; 
+// total /= 4;  
+// console.log(total);
 
-//3. Strict vs Loose Comparison
-console.log(10 == "10"); 
-console.log(10 === "10"); 
+// //3. Strict vs Loose Comparison
+// console.log(10 == "10"); 
+// console.log(10 === "10"); 
 
-//4. Job Eligibility Check
-let age = 25;
-let experience = 3;
-console.log(age > 18 && experience > 2);
+// //4. Job Eligibility Check
+// let age = 25;
+// let experience = 3;
+// console.log(age > 18 && experience > 2);
 
-//5. Implicit Type Conversion - String
- console.log(typeof(5 + "5"));
+// //5. Implicit Type Conversion - String
+//  console.log(typeof(5 + "5"));
 
-//6. Boolean Conversion Predictions
-console.log(Boolean(0));        
-console.log(Boolean("false"));  
-console.log(Boolean(null));     
+// //6. Boolean Conversion Predictions
+// console.log(Boolean(0));        
+// console.log(Boolean("false"));  
+// console.log(Boolean(null));     
 
-//7. Explicit Conversion to Number
-console.log(Number("123") + 10);
+// //7. Explicit Conversion to Number
+// console.log(Number("123") + 10);
 
-//8. Explicit Conversion to Boolean
-console.log(Boolean(0));   
-console.log(Boolean(1));   
-console.log(Boolean(""));  
+// //8. Explicit Conversion to Boolean
+// console.log(Boolean(0));   
+// console.log(Boolean(1));   
+// console.log(Boolean(""));  
 
-//9. String Join Practice
-let word1 = "Hello";
-let word2 = "Students";
-console.log(word1 + " " + word2);       
-console.log(`${word1} ${word2}`);       
+// //9. String Join Practice
+// let word1 = "Hello";
+// let word2 = "Students";
+// console.log(word1 + " " + word2);       
+// console.log(`${word1} ${word2}`);       
 
 //10. Final Output Value Prediction
-let a = "10";
-let b = 10;
-console.log(a + b);               
-console.log(Number(a) + b);       
+// let a = "10";
+// let b = 10;
+// console.log(a + b);               
+// console.log(Number(a) + b);       
 
+//11/08/2025
+
+//1. If-Else Practice
+// let number = 5; 
+
+// if (number > 0) {
+//     console.log("Positive number");
+// } else if (number < 0) {
+//     console.log("Negative number");
+// } else {
+//     console.log("Zero");
+// }
+
+// //2. Switch Statement
+// let monthNumber = 4; // you can change the value
+// let monthName;
+
+// switch (monthNumber) {
+//     case 1:
+//         monthName = "January";
+//         break;
+//     case 2:
+//         monthName = "February";
+//         break;
+//     case 3:
+//         monthName = "March";
+//         break;
+//     case 4:
+//         monthName = "April";
+//         break;
+//     case 5:
+//         monthName = "May";
+//         break;
+//     case 6:
+//         monthName = "June";
+//         break;
+//     case 7:
+//         monthName = "July";
+//         break;
+//     case 8:
+//         monthName = "August";
+//         break;
+//     case 9:
+//         monthName = "September";
+//         break;
+//     case 10:
+//         monthName = "October";
+//         break;
+//     case 11:
+//         monthName = "November";
+//         break;
+//     case 12:
+//         monthName = "December";
+//         break;
+//     default:
+//         monthName = "Invalid month number";
+// }
+// console.log(monthName);
+
+// //3. For Loop Table
+// let num = 7;
+
+// for (let i = 1; i <= 10; i++) {
+//     console.log(`${num} x ${i} = ${num * i}`);
+// }
+
+// //4. For-Of Loop
+// let colors = ["red", "blue", "green", "yellow"];
+
+// for (let color of colors) {
+//     console.log(color.toUpperCase());
+// }
+
+// //5. For-In Loop
+// let car = {
+//     brand: "Toyota",
+//     model: "Corolla",
+//     year: 2022
+// };
+
+// for (let property in car) {
+//     console.log(`${property}: ${car[property]}`);
+// }
+
+//12/08/2025
+ 12-8-2025
+
+ //1. Magic Number Checker
+
+function isMagicNumber(num) {
+    if (num % 3 === 0 && num % 7 === 0) {
+        console.log("* It's magic!");
+    } else {
+        console.log("Not magic");
+    }
+}
+
+isMagicNumber(21);
+isMagicNumber(10);
+
+//2. Name Shouter (Anonymous Function)
+
+let shoutName = function(name) {
+    console.log(name.toUpperCase() + "!!!");
+};
+
+shoutName("Harini"); 
+
+
+//3. Arrow Function Fortune Teller
+
+let tellFortune = (name, place = "Unknown") => {
+    console.log(`Dear ${name}, you will travel to ${place} soon!`);
+};
+
+tellFortune("Harini", "Paris");
+tellFortune("Harini"); 
+
+//4. Scope Detective
+
+function scopeDetective() {
+    if (true) {
+        var a = "I am var";
+        let b = "I am let";
+        const c = "I am const";
+        console.log("Inside block:", a, b, c);
+    }
+
+    console.log("Outside block (var):", a);
+
+    try {
+        console.log("Outside block (let):", b);
+    } catch (error) {
+        console.log("Outside block (let): Cannot access -", error.message);
+    }
+
+    try {
+        console.log("Outside block (const):", c);
+    } catch (error) {
+        console.log("Outside block (const): Cannot access -", error.message);
+    }
+}
+
+scopeDetective();
+
+//5. Arrow Function Sum Calculator
+let sumNumbers = (a, b) => a + b;
+
+console.log(sumNumbers(5, 10)); 
 
